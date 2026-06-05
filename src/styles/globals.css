@@ -1,0 +1,118 @@
+@import './fonts.css';
+
+/* Design tokens */
+:root {
+  --bg: #F5F4EF;
+  --bg-alt: #EDECE6;
+  --text: #1A1A1A;
+  --text-muted: #6B6962;
+  --accent: #005C5C;
+  --accent-light: #007A7A;
+  --accent-pale: #E0F0F0;
+  --border: #DDD9D0;
+  --dark: #1A1A1A;
+  --white: #F5F4EF;
+
+  --font-display: 'BN Chester', Georgia, serif;
+  --font-body: 'Klima', system-ui, sans-serif;
+  --font-mono: 'Klima', system-ui, sans-serif;
+
+  --max-width: 1280px;
+  --gutter: clamp(24px, 5vw, 72px);
+
+  --space-xs:  0.5rem;   /*  8px */
+  --space-sm:  1rem;     /* 16px */
+  --space-md:  1.5rem;   /* 24px */
+  --space-lg:  2.5rem;   /* 40px */
+  --space-xl:  4rem;     /* 64px */
+  --space-2xl: 6rem;     /* 96px */
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.75;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Typography utilities */
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 2px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Inline prose link — dotted underline, used in hero bio and about section */
+.prose-link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section container */
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}

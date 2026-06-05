@@ -1,0 +1,230 @@
+.page {
+  min-height: 100dvh;
+}
+
+.backWrap {
+  padding: 68px 0 24px;
+}
+
+.backInner {
+  width: min(880px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  color: var(--accent-light);
+}
+
+.backLink:hover span,
+.backLink:focus-visible span {
+  transform: translateX(-3px);
+}
+
+.hero {
+  padding: clamp(48px, 8vh, 96px) 0 clamp(32px, 5vh, 56px);
+}
+
+.heroInner {
+  width: min(640px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category {
+  color: var(--accent);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.heroImage {
+  width: min(880px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+}
+
+.heroImageEl {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.heroImagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  background: linear-gradient(135deg, var(--accent-pale) 0%, var(--border) 100%);
+  border-radius: 4px;
+}
+
+.heroPullQuote {
+  background: var(--accent);
+}
+
+.heroPullQuoteInner {
+  width: min(880px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+  padding: clamp(48px, 8vh, 80px) 0;
+}
+
+.pullQuoteText {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 44px);
+  color: var(--white);
+  line-height: 1.1;
+  max-width: 760px;
+  letter-spacing: 0;
+}
+
+.body {
+  padding: clamp(56px, 10vh, 100px) 0;
+}
+
+.bodyInner {
+  width: min(640px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 24px;
+  align-items: start;
+}
+
+.subhead {
+  grid-column: 1 / -1;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--text);
+  margin-top: 40px;
+  letter-spacing: 0;
+}
+
+.prose {
+  grid-column: 1 / -1;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 18px);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.figure {
+  grid-column: 1 / -1;
+  margin: 8px 0;
+  width: min(calc(100vw - (2 * var(--gutter))), 880px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.figureFull {
+  grid-column: 1 / -1;
+  width: min(calc(100vw - (2 * var(--gutter))), 880px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.figurePair {
+  grid-column: span 1;
+  margin: 0;
+}
+
+.bodyImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--accent-pale) 0%, var(--border) 100%);
+  border-radius: 4px;
+}
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 10px;
+  letter-spacing: 0.12em;
+}
+
+.projectNav {
+  background: var(--bg-alt);
+}
+
+.projectNavInner {
+  width: min(880px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 36px 0;
+  text-decoration: none;
+}
+
+.navDirection {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.navDirection span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.navLink:hover .navDirection span,
+.navLink:focus-visible .navDirection span {
+  transform: translateX(3px);
+}
+
+.navTitle {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(15px, 1.4vw, 18px);
+  color: var(--text);
+  letter-spacing: 0;
+}

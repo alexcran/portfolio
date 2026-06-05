@@ -1,0 +1,62 @@
+.section {
+  background: var(--dark);
+  padding: var(--space-xl) 0 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-bottom: var(--space-xl);
+}
+
+.invite {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 17px);
+  color: rgba(245, 244, 239, 0.6);
+  line-height: 1.75;
+}
+
+.email {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+.email::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.email:hover::after,
+.email:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.disclaimer {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: rgba(245, 244, 239, 0.35);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-top: var(--space-md);
+}

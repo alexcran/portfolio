@@ -1,0 +1,397 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Image cards ─────────────────────────────────────────────── */
+
+.imageCard {
+  display: block;
+  background: var(--bg-alt);
+}
+
+.case-study {
+  border: 1px solid var(--border);
+}
+
+.case-study:hover,
+.case-study:focus-within {
+  transform: translateY(-3px);
+}
+
+.photo {
+  background: var(--bg-alt);
+}
+
+/* Image fill — covers the entire card as the base layer */
+.imageFill {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, var(--accent-pale) 0%, var(--border) 100%);
+  transition: transform 0.45s ease;
+}
+
+.case-study:hover .imageFill,
+.case-study:focus-within .imageFill {
+  transform: scale(1.02);
+}
+
+.photo:hover .imageFill,
+.photo:focus-within .imageFill {
+  transform: scale(1.03);
+}
+
+/* Category pill — always visible, top-left, above image */
+.categoryLabel {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 24px;
+  background: rgba(245, 244, 239, 0.28);
+  border: 1px solid var(--border);
+  padding: 4px 9px;
+  border-radius: 2px;
+  color: var(--accent) !important;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+/* Project title — always visible, bottom-left, above details panel */
+.restingTitle {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+  z-index: 3;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.08;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+  transform-origin: left bottom;
+  transition: opacity 150ms ease, transform 180ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.imageCard:hover .restingTitle,
+.imageCard:focus-within .restingTitle,
+.textCard:hover .restingTitle,
+.textCard:focus-within .restingTitle {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.92);
+}
+
+/*
+  Details panel — hidden below the card at rest.
+  padding-bottom is sized to leave blank white space behind the
+  always-visible title so description + CTA appear above it.
+  At max title font (24px, 1.2 line-height, 2 lines = ~58px)
+  plus the title's own 14px padding top+bottom = ~86px. Using
+  92px gives a safe margin.
+*/
+.detailsPanel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: var(--bg);
+  border-radius: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateY(100%);
+  transition: transform 180ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.imageCard:hover .detailsPanel,
+.imageCard:focus-within .detailsPanel,
+.textCard:hover .detailsPanel,
+.textCard:focus-within .detailsPanel {
+  transform: translateY(0);
+}
+
+.panelTitle {
+  font-size: clamp(16px, 1.5vw, 20px);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 130ms ease 35ms, transform 160ms cubic-bezier(.16, 1, .3, 1) 35ms;
+}
+
+.imageCard:hover .panelTitle,
+.imageCard:focus-within .panelTitle,
+.textCard:hover .panelTitle,
+.textCard:focus-within .panelTitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.detailsPanel .footer {
+  margin-top: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detailsPanel,
+  .restingTitle,
+  .panelTitle {
+    transition: none;
+  }
+}
+
+/* ── Text cards ──────────────────────────────────────────────── */
+
+.textCard {
+  display: block;
+  padding: 0;
+  min-height: 320px;
+}
+
+.writing {
+  position: relative;
+}
+
+.writing::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--accent-light);
+  opacity: 0;
+  transform: scaleY(0.8);
+  transform-origin: center;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.writing:hover::before,
+.writing:focus-within::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.document:hover,
+.document:focus-within {
+  transform: translateY(-5px);
+}
+
+.bgAccent {
+  background: var(--accent);
+}
+
+.bgDark {
+  background: var(--dark);
+}
+
+.bgAlt {
+  background: var(--bg-alt);
+}
+
+.bgAlt .lightLabel {
+  color: var(--text-muted);
+}
+
+.bgAlt .lightTitle {
+  color: var(--text);
+}
+
+.lightLabel {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--accent-pale) !important;
+}
+
+.bgAlt .lightLabel {
+  background: rgba(0, 92, 92, 0.04);
+  border-color: var(--border);
+  color: var(--accent) !important;
+}
+
+.textFill {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.textFill span {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 38px);
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: 0;
+  opacity: 0.55;
+  transform: translateY(-8px);
+}
+
+.bgAlt .textFill span {
+  color: var(--text);
+  opacity: 0.35;
+}
+
+/* ── Shared body / typography ────────────────────────────────── */
+
+.body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.textCard .body {
+  padding: 0;
+  margin-top: auto;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.lightTitle {
+  color: var(--white);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: clamp(13px, 1.2vw, 15px);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.lightDescription {
+  color: rgba(245, 244, 239, 0.7);
+  transition: color 0.35s ease;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: inherit;
+  color: var(--text-muted);
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.lightArrow {
+  color: rgba(245, 244, 239, 0.7);
+}
+
+.ctaText {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  transition: color 0.35s ease;
+}
+
+.lightCta {
+  color: rgba(245, 244, 239, 0.7);
+}
+
+.card:hover .ctaText,
+.card:focus-within .ctaText {
+  color: var(--accent);
+}
+
+.textCard:hover .lightCta,
+.textCard:hover .lightArrow,
+.textCard:focus-visible .lightCta,
+.textCard:focus-visible .lightArrow {
+  color: var(--white);
+}
+
+.card:hover .arrow,
+.card:focus-within .arrow {
+  transform: translateX(4px);
+}
+
+/* ── Award badge ─────────────────────────────────────────────── */
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  z-index: 4;
+  pointer-events: auto;
+  cursor: default;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.18));
+}
+
+.badge img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.badge::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  white-space: nowrap;
+  background: rgba(26, 26, 26, 0.9);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 9px;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.badge:hover::after {
+  opacity: 1;
+}
+
+/* ── Photo card overrides (labels must read over dark images) ── */
+
+.photo .categoryLabel,
+.darkHero .categoryLabel {
+  background: rgba(245, 244, 239, 0.88);
+  border-color: rgba(245, 244, 239, 0.4);
+}
+
+.photo .restingTitle,
+.darkHero .restingTitle {
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55), 0 3px 14px rgba(0, 0, 0, 0.35);
+}

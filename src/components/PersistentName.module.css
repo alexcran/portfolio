@@ -1,0 +1,50 @@
+.name {
+  --persistent-left: max(var(--gutter), calc((100vw - 680px) / 2));
+  --persistent-font-size: clamp(52px, 9vw, 120px);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: inline-block;
+  overflow: visible;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: var(--persistent-font-size);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: var(--text);
+  text-decoration: none;
+  transform-origin: top left;
+  will-change: transform;
+}
+
+.homeName {
+  opacity: 0;
+  animation: fadeUpName 0.85s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.1s;
+}
+
+.fixedName {
+  --persistent-font-size: 18px;
+
+  opacity: 1;
+  transform: translate3d(var(--persistent-left), 22px, 0) scale(1);
+  width: max-content;
+  height: 18px;
+}
+
+.name:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@keyframes fadeUpName {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,290 @@
+/* ——— page shell ——— */
+
+.page {
+  min-height: 100dvh;
+  padding: clamp(56px, 8vw, 80px) 0 clamp(80px, 12vh, 120px);
+}
+
+.shell {
+  width: min(880px, calc(100vw - (2 * var(--gutter))));
+  margin: 0 auto;
+  padding: 0;
+}
+
+.column {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ——— utility bar (back + download) ——— */
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.back {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back:hover,
+.back:focus-visible {
+  color: var(--accent-light);
+}
+
+.downloadBtn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid currentColor;
+  padding: 5px 13px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.downloadBtn:hover,
+.downloadBtn:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ——— resume header ——— */
+
+.header {
+  margin-bottom: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.5vw, 53px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.contact {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contactLink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+  color: var(--accent);
+}
+
+/* ——— sections ——— */
+
+.section {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+/* Klima heavy, all-caps, tracked — visually distinct from skill category labels */
+.sectionLabel {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin: 0 0 18px;
+}
+
+/* ——— experience entries ——— */
+
+.entry {
+  margin-bottom: 24px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+/* title + dates on one flex row */
+.entryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+/* BN Chester job title, ~14pt */
+.jobTitle {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0;
+  flex: 1;
+}
+
+/* BN Chester school name, slightly smaller than job title */
+.schoolName {
+  font-family: var(--font-display);
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0;
+  flex: 1;
+}
+
+/* dates and location share the same right-column slot */
+.meta {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* employer hugs the title line above it */
+.employer {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 2px 0 0;
+  line-height: 1.3;
+}
+
+/* field of study — same role as employer */
+.field {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 2px 0 0;
+  line-height: 1.3;
+}
+
+/* Catholic Apostolate Center previous-roles line */
+.prevRoles {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 3px 0 0;
+  line-height: 1.45;
+}
+
+/* bullet list — refined middle-dot marker */
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+}
+
+.bullets li {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.bullets li::before {
+  content: '·';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* ——— education overrides (tighter vertical rhythm) ——— */
+
+.eduEntry {
+  margin-bottom: 14px;
+}
+
+.eduEntry:last-child {
+  margin-bottom: 0;
+}
+
+/* ——— skills ——— */
+
+.skillsBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+/* each row is a block so they never run together */
+.skillRow {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.65;
+  display: block;
+  margin: 0;
+}
+
+/* sentence-case bold teal — visually distinct from all-caps sectionLabel */
+.skillLabel {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ——— responsive ——— */
+
+@media (max-width: 600px) {
+  .entryRow {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .meta {
+    white-space: normal;
+  }
+}

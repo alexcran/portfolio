@@ -1,0 +1,109 @@
+.hero {
+  display: flex;
+  align-items: flex-start;
+  padding: clamp(15vh, 20vh, 25vh) var(--gutter) var(--space-xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.greeting {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 9vw, 120px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: var(--text);
+  animation: fadeUp 0.85s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.1s;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 9vw, 120px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+  margin-bottom: var(--space-md);
+  color: var(--text);
+  visibility: hidden;
+}
+
+.headline span {
+  display: inline;
+}
+
+.descriptor {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(12px, 1vw, 13px);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 24px;
+  animation: fadeUp 0.85s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.28s;
+}
+
+.employerLink {
+  composes: prose-link from global;
+  color: var(--text);
+  position: relative;
+}
+
+.employerLink::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  width: max-content;
+  max-width: min(220px, 80vw);
+  transform: translateX(-50%) translateY(6px);
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 100;
+}
+
+.employerLink:hover::before,
+.employerLink:focus-visible::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .employerLink::before {
+    transition: opacity 0.15s ease;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.subhead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 66%;
+  animation: fadeUp 0.85s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.46s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

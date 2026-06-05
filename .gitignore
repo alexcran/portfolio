@@ -1,0 +1,33 @@
+node_modules/
+dist/
+*.log
+dev-server.*.log
+
+# Debug screenshots and scripts from dev session
+shot-*.png
+grid-check.png
+screenshot-hover.png
+shot-badge*.png
+check-errors.mjs
+check2.mjs
+
+# Claude session memory
+memory/
+
+# Source/planning files (content lives in content/)
+portfolio-spec.md
+case-study.md
+visual-project.md
+photo-gallery.md
+document-preview.md
+writing-sample.md
+work-that-connects-us.md
+art-of-accompaniment.md
+basilica-event-posters.md
+basilica-welcome-booklet.md
+beginning-a-new-journey.md
+holy-week-basilica.md
+maola-rise-logo.md
+planting-hope.md
+rosary-pamphlet.md
+six-weeks.md
