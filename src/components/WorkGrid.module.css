@@ -1,5 +1,6 @@
 .section {
-  padding: 0;
+  padding: var(--space-2xl) 0;
+  scroll-margin-top: 96px;
 }
 
 .inner {
@@ -8,9 +9,19 @@
   padding: 0 var(--gutter);
 }
 
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--text);
+  margin-bottom: var(--space-lg);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--grid-cols, 3), minmax(0, 1fr));
   grid-auto-flow: dense;
   gap: var(--space-md);
 }

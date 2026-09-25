@@ -6,7 +6,7 @@ category: Book Design
 tags: [Editorial Design, Publication Design, Cover Design, Catholic]
 gridSpan: 1
 gridHeight: standard
-sortOrder: 4
+sortOrder: 3
 heroImage: /projects/art-of-accompaniment/hero.jpg
 description: Cover and interior design for a Catholic Apostolate Center resource on the theology and practice of accompaniment.
 cta: View the book

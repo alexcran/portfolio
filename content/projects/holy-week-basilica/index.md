@@ -6,7 +6,7 @@ category: Photography
 tags: [Photography, Liturgical, Documentary, Event]
 gridSpan: 1
 gridHeight: tall
-sortOrder: 8
+sortOrder: 6
 featured: true
 heroImage: /projects/holy-week-basilica/hero.jpg
 description: Liturgical photography from Holy Week and Easter at America's largest Catholic church.

@@ -1,5 +1,6 @@
 .section {
   padding: var(--space-2xl) 0 var(--space-xl);
+  scroll-margin-top: 96px;
 }
 
 .inner {

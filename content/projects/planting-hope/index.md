@@ -6,7 +6,7 @@ category: Photography
 tags: [Photography, Scenic, Agricultural, Award-Winning]
 gridSpan: 2
 gridHeight: tall
-sortOrder: 1
+sortOrder: 5
 heroImage: /projects/planting-hope/hero.jpg
 award: true
 description: Award-winning scenic photograph taken during one of our many spring tree planting events.

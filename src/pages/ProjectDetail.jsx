@@ -14,7 +14,7 @@ export default function ProjectDetail() {
 
   if (!project) return <Navigate to="/" replace />;
 
-  const { next } = getAdjacentProjects(id);
+  const { prev, next } = getAdjacentProjects(id);
   const { title, category, tags = [], pullQuote, heroImage, body } = project;
   const displayType = getDisplayType(project);
   const hasVisualHero = displayType === 'photo' || displayType === 'case-study' || displayType === 'document';
@@ -23,7 +23,7 @@ export default function ProjectDetail() {
     <main className={styles.page}>
       <div className={styles.backWrap}>
         <div className={styles.backInner}>
-          <Link to="/#work" className={styles.backLink}>
+          <Link to="/#design" className={styles.backLink}>
             <span aria-hidden="true">&lt;-</span> All Work
           </Link>
         </div>
@@ -87,13 +87,20 @@ export default function ProjectDetail() {
 
       <nav className={styles.projectNav}>
         <div className={styles.projectNavInner}>
+          {prev ? (
+            <Link to={`/work/${prev.id}`} className={styles.navLink}>
+              <span className={styles.navDirection}><span aria-hidden="true">&lt;-</span> Previous Project</span>
+              <span className={styles.navTitle}>{prev.title}</span>
+            </Link>
+          ) : <span aria-hidden="true" />}
+
           {next ? (
-            <Link to={`/work/${next.id}`} className={styles.navLink}>
+            <Link to={`/work/${next.id}`} className={`${styles.navLink} ${styles.navLinkNext}`}>
               <span className={styles.navDirection}>Next Project <span aria-hidden="true">-&gt;</span></span>
               <span className={styles.navTitle}>{next.title}</span>
             </Link>
           ) : (
-            <Link to="/#work" className={styles.navLink}>
+            <Link to="/#design" className={`${styles.navLink} ${styles.navLinkNext}`}>
               <span className={styles.navDirection}>Back to Work <span aria-hidden="true">-&gt;</span></span>
               <span className={styles.navTitle}>View the full archive</span>
             </Link>

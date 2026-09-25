@@ -2,7 +2,7 @@
 
 .page {
   min-height: 100dvh;
-  padding: clamp(56px, 8vw, 80px) 0 clamp(80px, 12vh, 120px);
+  padding: clamp(96px, 12vw, 128px) 0 clamp(80px, 12vh, 120px);
 }
 
 .shell {

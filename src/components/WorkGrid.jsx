@@ -8,12 +8,14 @@ function getDisplayType(project) {
   return project.cardType === 'image' ? 'case-study' : 'writing';
 }
 
-export default function WorkGrid({ projects }) {
+export default function WorkGrid({ id, heading, projects, columns = 3 }) {
   const ref = useScrollReveal();
 
   return (
-    <section id="work" className={styles.section} ref={ref}>
+    <section id={id} className={styles.section} ref={ref} style={{ '--grid-cols': String(columns) }}>
       <div className={styles.inner}>
+        <h2 className={`${styles.heading} reveal`}>{heading}</h2>
+
         <div className={styles.grid}>
           {projects.map((project, i) => {
             const displayType = getDisplayType(project);

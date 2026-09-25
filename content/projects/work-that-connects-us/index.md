@@ -6,7 +6,7 @@ category: Writing
 tags: [Feature, Internal Communications, Institutional Voice, Dairy]
 gridSpan: 1
 gridHeight: standard
-sortOrder: 5
+sortOrder: 8
 pullQuote: "Much of the work is repetitive. Much of it happens out of sight. All of it matters."
 cardBackground: dark
 description: A feature article for Maola's farmer-facing *Pipeline* magazine, celebrating how the cooperative celebrates National Dairy Month.

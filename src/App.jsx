@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import PersistentName from './components/PersistentName';
+import Header from './components/Header';
 import SiteFooter from './components/SiteFooter';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
@@ -9,7 +9,7 @@ import Colophon from './pages/Colophon';
 export default function App() {
   return (
     <>
-      <PersistentName />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work/:id" element={<ProjectDetail />} />

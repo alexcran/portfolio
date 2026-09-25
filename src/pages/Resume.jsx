@@ -9,7 +9,7 @@ export default function Resume() {
         <div className={styles.topBar}>
           <Link to="/" className={styles.back}>← Back</Link>
           <a
-            href="/Alex-Cranstoun-Resume-2026.pdf"
+            href="/Alex-Cranstoun-Resume-09-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.downloadBtn}
@@ -51,10 +51,14 @@ export default function Resume() {
             </div>
             <p className={styles.employer}>Maola Local Dairies</p>
             <ul className={styles.bullets}>
-              <li>Create strategic communications reaching 1,000+ employees across four states, aligning a largely deskless workforce with organizational goals.</li>
-              <li>Advise senior leadership and HR on communication strategy, shaping key initiatives and broadening reach to frontline employees.</li>
-              <li>Produce design, writing, and photography that reflects company values across every internal channel.</li>
-              <li>Measure communication impact and translate the findings into refinements that improve engagement.</li>
+              <li>Lead internal communications for a largely deskless workforce of 1,000+ employees across four states, in partnership with HR, IT, operations, food safety, and executive leadership.</li>
+              <li>Write executive communications for the CEO and senior leadership and equip leaders to communicate directly with their teams through LinkedIn post kits, talking points, and templates.</li>
+              <li>Proposed and launched a quarterly all-employee executive town hall in 2025 (60% watch rate).</li>
+              <li>Serve as internal crisis communications lead and author of the company's crisis communications guidelines.</li>
+              <li>Developed internal brand guidelines to support the company's unification under a single brand.</li>
+              <li>Led AI governance work alongside IT, including translation and further development of the company's AI Acceptable Use Policy and authorship of the Creative AI and Brand Authenticity Standards.</li>
+              <li>Serve as lead graphic designer for all internal projects, including facility signage, food safety activations, plant identity systems, internal templates, and merchandise.</li>
+              <li>Led implementation of internal communications technology, including employee SMS and email analytics, with employee surveys to measure results.</li>
             </ul>
           </article>
 
@@ -65,12 +69,10 @@ export default function Resume() {
             </div>
             <p className={styles.employer}>Basilica of the National Shrine of the Immaculate Conception</p>
             <ul className={styles.bullets}>
-              <li>Managed all publications for the largest Catholic church in North America, including books, signage, and promotional materials.</li>
-              <li>Produced weekly livestreams for audiences of 20,000+, serving as floor manager to ensure seamless execution.</li>
-              <li>Represented the Basilica as media spokesperson, fielding press inquiries and cultivating positive coverage.</li>
-              <li>Advised the Rector, Associate Rectors, and Board of Trustees on strategic communications as a member of the Rector's Executive Staff.</li>
-              <li>Supported the Development Department's fundraising strategy and strengthened partnerships with DC's tourism community to increase visibility.</li>
-              <li>Directed social media and website strategy, coordinating contractors to keep output aligned with organizational goals.</li>
+              <li>Managed all publications and digital channels for the largest Catholic church in North America, including books, signage, promotional materials, social media, and the website, with outside vendors.</li>
+              <li>Produced weekly livestreams for audiences of 20,000+, floor-managed major liturgies, and negotiated terms for national broadcasts.</li>
+              <li>Served as media spokesperson and advised the Rector, Associate Rectors, and Board of Trustees on strategic communications as a member of the Rector's Executive Staff.</li>
+              <li>Supported the Development Department's fundraising strategy and built partnerships with DC's tourism community.</li>
             </ul>
           </article>
 
@@ -81,36 +83,14 @@ export default function Resume() {
             </div>
             <p className={styles.employer}>Catholic Apostolate Center</p>
             <p className={styles.prevRoles}>
-              Previous Roles include Administrative Intern, Program Associate, and Production Coordinator
+              Previously Administrative Intern, Program Associate, and Production Coordinator
             </p>
             <ul className={styles.bullets}>
-              <li>Directed daily media operations and managed a multimedia studio for an international nonprofit.</li>
-              <li>Led production of a bi-monthly podcast series and numerous video projects, coordinating cross-functional teams.</li>
-              <li>Built and executed a social media strategy across platforms totaling 300,000+ followers, driving sustained engagement.</li>
-              <li>Supervised editing and design of major publications, maintaining consistent quality and brand alignment.</li>
-              <li>Organized multiple catechetical webinar series, managing schedules, content, and participant engagement.</li>
+              <li>Directed daily media operations and a multimedia studio for an international nonprofit, producing a biweekly podcast series and partner video projects with organizations such as the United States Conference of Catholic Bishops.</li>
+              <li>Built and executed a social media strategy across platforms with 300,000+ combined followers.</li>
+              <li>Supervised editing and design of major publications, including The Art of Accompaniment, Living as Missionary Disciples, and In Service to the Parish and the Church.</li>
+              <li>Organized all catechetical webinar series, including scheduling, content, and participant management.</li>
             </ul>
-          </article>
-        </section>
-
-        {/* EDUCATION */}
-        <section className={styles.section}>
-          <h2 className={styles.sectionLabel}>Education</h2>
-
-          <article className={`${styles.entry} ${styles.eduEntry}`}>
-            <div className={styles.entryRow}>
-              <h3 className={styles.schoolName}>University of Maryland Global Campus</h3>
-              <span className={styles.meta}>College Park, MD</span>
-            </div>
-            <p className={styles.field}>Integrated Strategic Communications</p>
-          </article>
-
-          <article className={`${styles.entry} ${styles.eduEntry}`}>
-            <div className={styles.entryRow}>
-              <h3 className={styles.schoolName}>The Catholic University of America</h3>
-              <span className={styles.meta}>Washington, DC</span>
-            </div>
-            <p className={styles.field}>Theology and Religious Studies</p>
           </article>
         </section>
 
@@ -122,24 +102,45 @@ export default function Resume() {
             <p className={styles.skillRow}>
               <span className={styles.skillLabel}>Communications</span>
               {' · '}
-              Strategic communications, media &amp; PR, crisis communications
+              Internal and executive communications, crisis communications, media relations, writing and editing
             </p>
             <p className={styles.skillRow}>
-              <span className={styles.skillLabel}>Design &amp; Photography</span>
+              <span className={styles.skillLabel}>Design &amp; Media</span>
               {' · '}
-              Brand identity, typography, photography, Adobe Creative Suite
+              Brand identity and guidelines, graphic design, typography, photography, livestream and video production, podcast production
             </p>
             <p className={styles.skillRow}>
               <span className={styles.skillLabel}>Platforms</span>
               {' · '}
-              Microsoft 365 &amp; SharePoint, Workshop, Mailchimp, Meltwater, WordPress
+              Microsoft 365, SharePoint, Workshop (internal email), Mailchimp, Meltwater, WordPress, Adobe Creative Cloud
             </p>
             <p className={styles.skillRow}>
               <span className={styles.skillLabel}>Web</span>
               {' · '}
-              HTML/CSS, Next.js, React, Astro, Tailwind, Sanity, Supabase, Vercel
+              HTML/CSS, React, Next.js
             </p>
           </div>
+        </section>
+
+        {/* EDUCATION */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionLabel}>Education</h2>
+
+          <article className={`${styles.entry} ${styles.eduEntry}`}>
+            <div className={styles.entryRow}>
+              <h3 className={styles.schoolName}>University of Maryland Global Campus</h3>
+              <span className={styles.meta}>College Park, MD</span>
+            </div>
+            <p className={styles.field}>Integrated Strategic Communications, in progress</p>
+          </article>
+
+          <article className={`${styles.entry} ${styles.eduEntry}`}>
+            <div className={styles.entryRow}>
+              <h3 className={styles.schoolName}>The Catholic University of America</h3>
+              <span className={styles.meta}>Washington, DC</span>
+            </div>
+            <p className={styles.field}>Theology and Religious Studies, attended</p>
+          </article>
         </section>
 
         </div>

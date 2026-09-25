@@ -6,7 +6,7 @@ category: Brand Identity
 tags: [Logo Design, Identity, Illustration, Award-Winning]
 gridSpan: 1
 gridHeight: standard
-sortOrder: 7
+sortOrder: 1
 heroImage: /projects/maola-rise-logo/hero.jpg
 award: true
 description: A logo and identity mark for Maola's multi-year growth strategy.

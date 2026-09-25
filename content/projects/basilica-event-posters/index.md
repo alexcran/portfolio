@@ -4,9 +4,9 @@ title: Basilica Event Posters
 displayType: case-study
 category: Print Design
 tags: [Print Design, Typography, Illustration, Liturgical]
-gridSpan: 2
+gridSpan: 3
 gridHeight: standard
-sortOrder: 6
+sortOrder: 4
 heroImage: /projects/basilica-event-posters/hero.jpg
 heroImagePosition: top
 darkHero: true

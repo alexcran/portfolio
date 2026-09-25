@@ -6,7 +6,7 @@ category: Writing
 tags: [Ghostwriting, Executive Voice, Editorial, Award-Winning]
 gridSpan: 2
 gridHeight: standard
-sortOrder: 3
+sortOrder: 7
 pullQuote: "For me, leadership is about empowering others."
 award: true
 cardBackground: accent

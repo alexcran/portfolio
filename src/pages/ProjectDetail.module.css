@@ -192,6 +192,9 @@
 .projectNavInner {
   width: min(880px, calc(100vw - (2 * var(--gutter))));
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 .navLink {
@@ -200,6 +203,11 @@
   gap: 6px;
   padding: 36px 0;
   text-decoration: none;
+}
+
+.navLinkNext {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .navDirection {
@@ -219,6 +227,22 @@
 .navLink:hover .navDirection span,
 .navLink:focus-visible .navDirection span {
   transform: translateX(3px);
+}
+
+.navLink:not(.navLinkNext):hover .navDirection span,
+.navLink:not(.navLinkNext):focus-visible .navDirection span {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 640px) {
+  .projectNavInner {
+    grid-template-columns: 1fr;
+  }
+
+  .navLinkNext {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .navTitle {
